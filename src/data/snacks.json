@@ -1,0 +1,25 @@
+[
+  { "id": "diet-coke", "name": "Diet Coke", "brand": "Coca-Cola", "emoji": "🥤", "category": "drinks", "wrapper": "#C8CDD3", "stock": 12 },
+  { "id": "dr-pepper", "name": "Dr Pepper", "brand": "Dr Pepper", "emoji": "🥤", "category": "drinks", "wrapper": "#7A1F2B", "stock": 8 },
+  { "id": "limonata", "name": "Limonata", "brand": "San Pellegrino", "emoji": "🍋", "category": "drinks", "wrapper": "#F2C230", "stock": 6 },
+  { "id": "grenade-fudge-brownie", "name": "Fudge Brownie Shake", "brand": "Grenade", "emoji": "💪", "category": "drinks", "wrapper": "#4A2E22", "stock": 4 },
+  { "id": "irn-bru", "name": "Irn-Bru", "brand": "Barr", "emoji": "🧡", "category": "drinks", "wrapper": "#F26B21", "stock": 5 },
+
+  { "id": "kitkat", "name": "KitKat", "brand": "Nestlé", "emoji": "🍫", "category": "chocolate", "wrapper": "#D6202B", "stock": 10 },
+  { "id": "kinder-chocolate", "name": "Kinder Chocolate", "brand": "Ferrero", "emoji": "🍫", "category": "chocolate", "wrapper": "#F6F3EC", "stock": 9 },
+  { "id": "kinder-bueno", "name": "Kinder Bueno", "brand": "Ferrero", "emoji": "🥜", "category": "chocolate", "wrapper": "#E3D2B4", "stock": 2 },
+  { "id": "twirl", "name": "Twirl", "brand": "Cadbury", "emoji": "🌀", "category": "chocolate", "wrapper": "#5B2A86", "stock": 7 },
+  { "id": "tunnocks-teacake", "name": "Teacake", "brand": "Tunnock's", "emoji": "🫖", "category": "chocolate", "wrapper": "#B5121B", "stock": 6 },
+
+  { "id": "walkers-ready-salted", "name": "Ready Salted", "brand": "Walkers", "emoji": "🥔", "category": "crisps", "wrapper": "#D2232A", "stock": 9 },
+  { "id": "walkers-cheese-onion", "name": "Cheese & Onion", "brand": "Walkers", "emoji": "🧀", "category": "crisps", "wrapper": "#1D58C4", "stock": 7 },
+  { "id": "monster-munch", "name": "Pickled Onion Monster Munch", "brand": "Walkers", "emoji": "👹", "category": "crisps", "wrapper": "#2E9E44", "stock": 1 },
+  { "id": "percy-pig", "name": "Percy Pig", "brand": "M&S", "emoji": "🐷", "category": "sweets", "wrapper": "#F49AB8", "stock": 8 },
+  { "id": "tangfastics", "name": "Tangfastics", "brand": "Haribo", "emoji": "🍬", "category": "sweets", "wrapper": "#16A3DC", "stock": 5 },
+
+  { "id": "ms-chocolatey-rounds", "name": "Extremely Chocolatey Rounds", "brand": "M&S", "emoji": "🍪", "category": "biscuits", "wrapper": "#3A2217", "stock": 6 },
+  { "id": "ms-belgian-chunk-cookies", "name": "Belgian Chocolate Chunk Cookies", "brand": "M&S", "emoji": "🍪", "category": "biscuits", "wrapper": "#A5683A", "stock": 5 },
+  { "id": "ms-millionaires-shortbread", "name": "Millionaire's Shortbread", "brand": "M&S", "emoji": "🍯", "category": "biscuits", "wrapper": "#D9A33F", "stock": 0 },
+  { "id": "ms-shortbread-fingers", "name": "All Butter Shortbread Fingers", "brand": "M&S", "emoji": "🧈", "category": "biscuits", "wrapper": "#EBDDB0", "stock": 7 },
+  { "id": "jaffa-cakes", "name": "Jaffa Cakes", "brand": "McVitie's", "emoji": "🍊", "category": "biscuits", "wrapper": "#22408F", "stock": 11 }
+]

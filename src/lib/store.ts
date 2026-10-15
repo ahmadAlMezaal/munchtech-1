@@ -37,6 +37,37 @@ export function findSnack(state: AppState, snackId: string): Snack | undefined {
   return state.snacks.find((snack) => snack.id === snackId)
 }
 
+export function snackOfTheWeek(
+  state: AppState,
+  now: Date,
+): { snack: Snack; count: number } | null {
+  const weekAgo = now.getTime() - 7 * 24 * 60 * 60 * 1000
+  const totals = new Map<string, { count: number; latest: number }>()
+
+  for (const entry of state.log) {
+    const at = Date.parse(entry.at)
+    if (!Number.isFinite(at) || at < weekAgo || at > now.getTime()) continue
+
+    const total = totals.get(entry.snackId) ?? { count: 0, latest: 0 }
+    totals.set(entry.snackId, { count: total.count + 1, latest: Math.max(total.latest, at) })
+  }
+
+  let champion: { snack: Snack; count: number; latest: number } | null = null
+  for (const [snackId, total] of totals) {
+    const snack = findSnack(state, snackId)
+    if (
+      snack &&
+      (!champion ||
+        total.count > champion.count ||
+        (total.count === champion.count && total.latest > champion.latest))
+    ) {
+      champion = { snack, ...total }
+    }
+  }
+
+  return champion ? { snack: champion.snack, count: champion.count } : null
+}
+
 export function consume(state: AppState, snackId: string, person: string, now: Date): AppState {
   const snack = findSnack(state, snackId)
   if (!snack) return state

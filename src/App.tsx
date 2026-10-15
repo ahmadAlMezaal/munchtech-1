@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { ActivityLog } from './components/ActivityLog'
 import { NamePicker } from './components/NamePicker'
 import { SnackGrid, type Dispensed } from './components/SnackGrid'
+import { SnackOfTheWeek } from './components/SnackOfTheWeek'
 import { PERSON_KEY, browserStorage, consume, findSnack, loadState, saveState } from './lib/store'
 
 function loadPerson(): string | null {
@@ -60,6 +61,8 @@ export default function App() {
           Pick your name to start snacking.
         </p>
       )}
+
+      <SnackOfTheWeek state={state} now={now} />
 
       <main className="layout">
         <SnackGrid

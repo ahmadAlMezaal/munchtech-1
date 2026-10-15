@@ -118,6 +118,64 @@ select {
   width: fit-content;
 }
 
+.weekly-banner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 28px;
+  padding: 22px 28px;
+  border: 4px solid var(--ink);
+  border-radius: 20px;
+  background: linear-gradient(115deg, #ffe08a 0%, #ffc21a 48%, #f49ab8 100%);
+  box-shadow: 6px 6px 0 var(--ink);
+}
+
+.weekly-banner__trophy {
+  flex: 0 0 auto;
+  font-size: 3.5rem;
+  line-height: 1;
+  filter: drop-shadow(2px 3px 0 rgb(18 26 69 / 0.2));
+}
+
+.weekly-banner__content {
+  min-width: 0;
+}
+
+.weekly-banner__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  font-weight: 400;
+  color: var(--cabinet-deep);
+  line-height: 1.1;
+}
+
+.weekly-banner__champion {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 6px;
+  font-size: 1.1rem;
+  line-height: 1.3;
+}
+
+.weekly-banner__emoji {
+  flex: 0 0 auto;
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.weekly-banner__count {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.weekly-banner__empty {
+  margin-top: 6px;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
 .layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 340px;
@@ -415,6 +473,26 @@ select {
   .picker,
   .picker__select {
     width: 100%;
+  }
+
+  .weekly-banner {
+    gap: 12px;
+    margin-bottom: 22px;
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .weekly-banner__trophy {
+    font-size: 2.6rem;
+  }
+
+  .weekly-banner__champion {
+    gap: 8px;
+    font-size: 1rem;
+  }
+
+  .weekly-banner__emoji {
+    font-size: 2rem;
   }
 }
 

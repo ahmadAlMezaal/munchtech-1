@@ -118,6 +118,111 @@ select {
   width: fit-content;
 }
 
+.champions {
+  margin-bottom: 28px;
+  padding: 20px 24px;
+  border: 4px solid var(--ink);
+  border-radius: 20px;
+  background: var(--paper);
+  box-shadow: 6px 6px 0 var(--ink);
+}
+
+.champions__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px dashed var(--ink);
+}
+
+.champions__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 4vw, 1.85rem);
+  font-weight: 400;
+  color: var(--cabinet);
+  line-height: 1.1;
+}
+
+.champions__subtitle {
+  font-size: 0.95rem;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.champions__empty {
+  padding: 16px 0;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.champions__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.champions__item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border: 3px solid var(--ink);
+  border-radius: 14px;
+  background: var(--glass);
+  box-shadow: 3px 3px 0 var(--ink);
+}
+
+.champions__medal {
+  flex: 0 0 auto;
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.champions__details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  flex: 1;
+}
+
+.champions__person-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.champions__name {
+  font-size: 1.05rem;
+  font-weight: 800;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.champions__count {
+  font-size: 0.85rem;
+  font-weight: 700;
+  opacity: 0.85;
+  white-space: nowrap;
+}
+
+.champions__favourite {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
 .layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 340px;
@@ -415,6 +520,21 @@ select {
   .picker,
   .picker__select {
     width: 100%;
+  }
+
+  .champions {
+    padding: 16px;
+    margin-bottom: 22px;
+    border-radius: 16px;
+  }
+
+  .champions__list {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .champions__medal {
+    font-size: 1.8rem;
   }
 }
 

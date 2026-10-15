@@ -34,4 +34,10 @@ describe('App', () => {
 
     expect(screen.getByLabelText("Who's snacking?")).toHaveValue('Mo')
   })
+
+  it('displays the snack champions panel', () => {
+    render(<App />)
+
+    expect(screen.getByRole('heading', { name: 'Snack Champions' })).toBeInTheDocument()
+  })
 })

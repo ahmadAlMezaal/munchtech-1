@@ -16,7 +16,10 @@ describe('App', () => {
     render(<App />)
 
     await user.selectOptions(screen.getByLabelText("Who's snacking?"), 'Wanda')
+    const report = screen.getByRole('region', { name: 'Monthly report' })
+    const totalBefore = Number(within(report).getByText(/snacks? consumed/).textContent?.split(' ')[0])
     await user.click(screen.getByRole('button', { name: 'Consume KitKat' }))
+    expect(within(report).getByText(`${totalBefore + 1} snacks consumed`)).toBeInTheDocument()
 
     expect(screen.getByTestId('stock-kitkat')).toHaveTextContent('9 left')
     expect(screen.getByText('Enjoy your KitKat, Wanda')).toBeInTheDocument()

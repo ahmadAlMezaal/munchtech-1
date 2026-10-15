@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { ActivityLog } from './components/ActivityLog'
 import { NamePicker } from './components/NamePicker'
+import { MonthlyReport } from './components/MonthlyReport'
 import { SnackGrid, type Dispensed } from './components/SnackGrid'
 import { PERSON_KEY, browserStorage, consume, findSnack, loadState, saveState } from './lib/store'
 
@@ -62,12 +63,15 @@ export default function App() {
       )}
 
       <main className="layout">
-        <SnackGrid
-          snacks={state.snacks}
-          canConsume={person !== null}
-          dispensed={dispensed}
-          onConsume={handleConsume}
-        />
+        <div className="machine-column">
+          <SnackGrid
+            snacks={state.snacks}
+            canConsume={person !== null}
+            dispensed={dispensed}
+            onConsume={handleConsume}
+          />
+        <MonthlyReport log={state.log} snacks={state.snacks} now={now} />
+        </div>
         <ActivityLog log={state.log} snacks={state.snacks} now={now} />
       </main>
     </div>
